@@ -1,0 +1,10 @@
+읕project_r
+   읕main  0/188  Ram=5
+      쳐@cinit1  (Inline)  Ram=0
+      쳐@delay_ms1  0/20  Ram=1
+      쳐@PSTRINGC7_9600_62_63  0/90  Ram=4
+      쳐@MEMSET  0/9  Ram=0
+      쳐@delay_ms1  0/20  Ram=1
+      쳐@delay_ms1  0/20  Ram=1
+      쳐@PSTRINGR_9600_62_63  0/25  Ram=2
+      읕@MEMSET  0/9  Ram=0

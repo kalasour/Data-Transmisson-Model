@@ -1,0 +1,134 @@
+[PROJECT]
+Target=project_r.hex
+Processor_Text=PIC16F886
+CCSVersion=5.074
+Compiler=PCM
+[Target Data]
+FileList=project_r.c
+[project_r.c]
+Type=4
+[mru-list]
+1=project_r.c
+
+[defines]
+buildcount=42
+
+[Opened Files]
+1=project.c
+t1=31
+2=project_r.c
+t2=31
+Count=2
+3=project.c
+t3=54
+4=..\lab5\5.3.c
+t4=53
+
+[ProjectLog]
+Days=7
+D1=27-03-2019
+D1_L=4
+D1_L1=[80903]Stopped Editing.
+D1_L2=[81145]Started Editing.
+D1_L3=[81451]Stopped Editing.
+TotalEdit=52
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L4=[83856]Project Closed.
+D2=28-03-2019
+D2_L=4
+D2_L1=[50150]Project Opened.
+D2_L2=[50151]Project Closed.
+D2_L3=[50152]Project Opened.
+D2_L4=[50158]Project Closed.
+D3=31-03-2019
+D3_L=8
+D3_L1=[78512]Project Opened.
+D3_L2=[78513]Project Closed.
+D3_L3=[78514]Project Opened.
+D3_L4=[78526]Project Closed.
+D3_L5=[82564]Project Opened.
+D3_L6=[82680]Started Editing.
+D3_L7=[83047]Stopped Editing.
+D3_E=2
+D3_D=0
+D3_L8=[84997]Project Closed.
+D4=01-04-2019
+D4_L=18
+D4_L1=[81898]Project Opened.
+D4_L2=[81899]Project Closed.
+D4_L3=[81900]Project Opened.
+D4_L4=[81916]Started Editing.
+D4_L5=[81973]Stopped Editing.
+D4_E=17
+D4_D=0
+D4_L6=[82262]Started Editing.
+D4_L7=[82593]Stopped Editing.
+D4_L8=[83491]Started Editing.
+D4_L9=[84226]Stopped Editing.
+D4_L10=[84263]Started Editing.
+D4_L11=[84839]Stopped Editing.
+D4_L12=[84983]Project Closed.
+D4_L13=[85203]Project Opened.
+D4_L14=[85385]Started Editing.
+D4_L15=[85529]Stopped Editing.
+D4_L16=[85529]Project Closed.
+D4_L17=[85851]Project Opened.
+D4_L18=[85984]Project Closed.
+D5=02-04-2019
+D5_L=33
+D5_L1=[301]Project Opened.
+D5_L2=[372]Started Editing.
+D5_L3=[742]Stopped Editing.
+D5_E=28
+D5_D=0
+D5_L4=[742]Project Closed.
+D5_L5=[1476]Project Opened.
+D5_L6=[1659]Started Editing.
+D5_L7=[1663]Stopped Editing.
+D5_L8=[3942]Started Editing.
+D5_L9=[4238]Stopped Editing.
+D5_L10=[4238]Project Closed.
+D5_L11=[4354]Project Opened.
+D5_L12=[5092]Project Closed.
+D5_L13=[82161]Project Opened.
+D5_L14=[82174]Started Editing.
+D5_L15=[82474]Stopped Editing.
+D5_L16=[82959]Started Editing.
+D5_L17=[82971]Stopped Editing.
+D5_L18=[82987]Started Editing.
+D5_L19=[83409]Stopped Editing.
+D5_L20=[83446]Started Editing.
+D5_L21=[83890]Stopped Editing.
+D5_L22=[84236]Started Editing.
+D5_L23=[84556]Stopped Editing.
+D5_L24=[85357]Started Editing.
+D5_L25=[85662]Stopped Editing.
+D5_L26=[85662]Project Closed.
+D5_L27=[85881]Project Opened.
+D5_L28=[85917]Started Editing.
+D5_L29=[85941]Stopped Editing.
+D5_L30=[85941]Project Closed.
+D5_L31=[86106]Project Opened.
+D5_L32=[86203]Started Editing.
+D5_L33=[86357]Stopped Editing.
+D6=03-04-2019
+D6_L=5
+D6_L1=[4]Project Closed.
+D6_L2=[255]Project Opened.
+D6_L3=[267]Started Editing.
+D6_L4=[283]Stopped Editing.
+D6_E=1
+D6_D=0
+D6_L5=[283]Project Closed.
+D7=15-04-2019
+D7_L=2
+D7_L1=[83830]Project Opened.
+D7_L2=[83947]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=project_r (main)

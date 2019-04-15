@@ -1,0 +1,58 @@
+
+#include <16F886.h>
+#device ADC=10 *=16
+
+#FUSES NOWDT //No Watch Dog Timer
+#FUSES PUT //Power Up Timer
+#FUSES NOMCLR //Master Clear pin not enabled
+#FUSES NOPROTECT //Code not protected from reading
+#FUSES NOCPD //No EE protection
+#FUSES BROWNOUT //Brownout reset
+#FUSES IESO //Internal External Switch Over mode enabled
+#FUSES FCMEN //Fail-safe clock monitor enabled
+#FUSES NOLVP //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+#FUSES NODEBUG //No Debug mode for ICD
+#FUSES NOWRT //Program memory not write protected
+#FUSES BORV40 //Brodddddwnout reset at 4.0V
+#FUSES RESERVED //Used to set the reserved FUSE bits
+#FUSES INTRC_IO 
+
+#use delay(clock=8M)
+
+#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8)
+void main() {
+int dec = 0;
+    setup_adc_ports(sAN0); // setup PIN A0 as analog input 
+    setup_adc( ADC_CLOCK_INTERNAL ); 
+delay_ms(2000);
+    printf("Program started!\n");
+    set_adc_channel( 0 ); // set the ADC chaneel to read 
+     // wait for the sensor reading to finish
+     int count=0;
+    while (1) {
+//!       printf("Sensor value = %Lu\r\n", read_adc()); 
+int l=read_adc();
+dec=0;
+//!      printf("Wait signal... %d\n",l);
+       if(read_adc()>=700)
+       {
+       delay_ms(500);
+            for(count=0;count<8;count++){
+                delay_ms(500); 
+               if(read_adc()>=700)
+                {
+                     printf("1\n");
+                     dec = (dec * 2) + 1;
+                  }else
+                 {
+                     printf("0\n");
+                     dec = dec * 2;
+                  }
+            }
+            printf("%d\n", dec); 
+       }
+       
+
+
+    }
+}
