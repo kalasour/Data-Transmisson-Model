@@ -1,0 +1,69 @@
+
+ROM used:   1835/8192 (22%)
+            1835/8192 (22%) including unused fragments
+
+            0.7 Average locations per line
+            3.2 Average locations per statement
+
+RAM used:   52/368 (14%) at main() level
+            90/368 (24%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   66    20   4  spaceship control.c
+  761     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F886.h
+   23     0   0  serialinput.h
+ 1352   359  63  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+  435   129  23  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+   86    59  10  serialinput.c
+----- -----
+ 2783   567 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0    117   6   13             @MULFF
+0     29   2    2             @ITOF
+0    321  17   16             @ADDFF
+ Inline        14             @DIVFF
+0    490  27   19   1549 12.4  strtof
+0     20   1    1             @delay_ms1
+0    176  10    1    626  6.2  MAIN
+0      3   0    0             @const886
+0     90   5    4             @PSTRINGC7_115200_62_63
+0      6   0    0             @const891
+ Inline         5             @FTOSD
+0     79   4   13             @DIV3232
+0    228  12   13             @PRINTF_L32D_115200_62_63FPFPF
+0     91   5    5             @PSTRINGCN7_115200_62_63
+0     94   5    3    965  8.2  ser_isr
+0     10   1    0     69  1.6  initSerInput
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               4
+    Statements              567
+    Comments                953
+    Volume (V)              4100
+    Difficulty (D)          26.9
+    Effort to implement (E) 110140
+    Time to implement (T)   1 hours, 42 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   24
+    Maintainability (MI)    6
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00050    77  0  
+00051-007FF  1754  213  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

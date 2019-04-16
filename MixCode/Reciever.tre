@@ -1,0 +1,11 @@
+ÀÄReciever
+   ÃÄMAIN  0/208  Ram=5
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@PSTRINGC7_115200_62_63  0/120  Ram=4
+   ³  ÃÄ@MEMSET  0/9  Ram=0
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@PSTRINGR_115200_62_63  0/32  Ram=2
+   ³  ÀÄ@MEMSET  0/9  Ram=0
+   ÀÄser_isr  0/118  Ram=3
