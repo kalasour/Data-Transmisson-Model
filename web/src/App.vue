@@ -107,7 +107,7 @@ export default {
   },
   data() {
     return {
-      chat: ["cfghcfh", "fhskkjllkjkljn","dfghjkl;"],
+      chat: [],
       canSend: true,
       valid: false,
       message: ""
