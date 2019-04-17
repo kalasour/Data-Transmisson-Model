@@ -60,7 +60,6 @@ void main()
       //!         printf("Sensor value = %Lu\r\n", value);
    }
    printf("Auto carribrate  End max = %Lu ,min = %Lu\nmid = %Lu\n", max, min, (max + min) / 2);
-    delay_ms(1000);
    while (1)
    {
       dec = 0;

@@ -1,10 +1,9 @@
-C L "initSerInput" 8 3 1 "FUNCTION"
-D G "__PCM__" 0 83 ""5.074""
-D G "__DEVICE__" 0 83 "886"
-D G "__DATE__" 0 83 ""17-Apr-19""
-D G "__TIME__" 0 83 ""03:36:14""
-D G "_UNICODE" 0 83 ""?""
-D G "__EVAL" 0 83 ""?"" "Standard Header file for the PIC16F886 device ////////////////"
+D G "__PCM__" 0 87 ""5.074""
+D G "__DEVICE__" 0 87 "886"
+D G "__DATE__" 0 87 ""17-Apr-19""
+D G "__TIME__" 0 87 ""23:48:39""
+D G "_UNICODE" 0 87 ""?""
+D G "__EVAL" 0 87 ""?"" "Standard Header file for the PIC16F886 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 39 ""
 v L "value" 1 39 "int8" `55 
@@ -1111,18 +1110,18 @@ V L "s" 3 51 "*int8" `602
 f G "atoi" 3 51 "sint8(*int8 s)" `601  "Syntax: signed int32  atoi32(char * s)"
 F N "atoi32" 3 59 ""
 V L "s" 3 59 "*int8" `604 
-f G "atoi32" 3 59 "sint32(*int8 s)" `603  "Syntax: char *  itoa(signed int32 num, int8 base, char * s)"
+f G "atoi32" 3 59 "sint32(*int8 s,*int8 s1,*int8 s2)" `603  "Syntax: char *  itoa(signed int32 num, int8 base, char * s)"
 C L "atoi32" 3 47 2 "FUNCTION"
 F N "itoa" 3 80 ""
 V L "num" 3 80 "sint32" `606 
 V L "base" 3 80 "int8" `607 
 V L "s" 3 80 "*int8" `608 
-f G "itoa" 3 80 "*int8(sint32 num,int8 base,*int8 s)" `605  "Standard template: signed int16  atol(char * s)"
+f G "itoa" 3 80 "*int8(sint32 num,int8 base,*int8 s,*int8 s1,*int8 s2,int8 n)" `605  "Standard template: signed int16  atol(char * s)"
 C L "itoa" 3 82 1 "*"
 C L "itoa" 3 82 1 "*"
 F N "atol" 3 86 ""
 V L "s" 3 86 "*int8" `610 
-f G "atol" 3 86 "sint16(*int8 s)" `609  "Standard template: int16 strtoul(char * s,char *endptr,signed int base)"
+f G "atol" 3 86 "sint16(*int8 s,int8 n)" `609  "Standard template: int16 strtoul(char * s,char *endptr,signed int base)"
 C L "atol" 3 88 1 "*"
 C L "atol" 3 88 1 "*"
 C L "atol" 3 88 1 "*"
@@ -1131,7 +1130,7 @@ F N "strtol" 3 94 ""
 V L "s" 3 94 "*int8" `612 
 V L "endptr" 3 94 "*int8" `613 
 V L "base" 3 94 "sint8" `614 
-f G "strtol" 3 94 "sint16(*int8 s,*int8 endptr,sint8 base)" `611  "Standard template: int16 strtoul(char * s,char *endptr,signed int base)"
+f G "strtol" 3 94 "sint16(*int8 s,*int8 endptr,sint8 base,*void s2,int8 n)" `611  "Standard template: int16 strtoul(char * s,char *endptr,signed int base)"
 C L "strtol" 3 96 1 "*"
 C L "strtol" 3 96 1 "*"
 C L "strtol" 3 96 1 "*"
@@ -1168,7 +1167,7 @@ C L "atoe" 3 161 1 "*"
 C L "atoe" 3 161 1 "*"
 C L "atoe" 3 161 1 "*"
 F N "rand" 3 170 ""
-f G "rand" 3 170 "int16()" `625  "The srand function uses the argument as a seed for a new sequence of"
+f G "rand" 3 170 "int16(*int8 strtoul,*int8 strtof,int8 strtof48)" `625  "The srand function uses the argument as a seed for a new sequence of"
 C L "rand" 3 172 1 "*"
 C L "rand" 3 172 1 "*"
 C L "rand" 3 172 1 "*"
@@ -1186,11 +1185,11 @@ C L "rand" 3 172 1 "*"
 C L "rand" 3 172 1 "*"
 F N "srand" 3 192 ""
 V L "seed" 3 192 "int32" `627 
-f G "srand" 3 192 "void(int32 seed)" `626  "Memory management functions"
+f G "srand" 3 192 "void(int32 seed,int8 strtof48)" `626  "Memory management functions"
 C L "srand" 3 172 3 "FUNCTION"
 F N "system" 3 206 ""
 V L "string" 3 206 "*int8" `629 
-f G "system" 3 206 "sint8(*int8 string)" `628  "Searching and sorting utilities"
+f G "system" 3 206 "sint8(*int8 string,*int8 strtoul,*int8 strtof,int8 strtof48)" `628  "Searching and sorting utilities"
 C L "system" 3 172 1 "FUNCTION"
 C L "system" 3 212 1 "*"
 C L "system" 3 212 1 "*"
@@ -1219,7 +1218,7 @@ f G "div" 3 252 "div_t(sint8 numer,sint8 denom)" `630
 F N "ldiv" 3 253 ""
 V L "numer" 3 253 "sint16" `634 
 V L "denom" 3 253 "sint16" `635 
-f G "ldiv" 3 253 "ldiv_t(sint16 numer,sint16 denom)" `633  "Multibyte character functions"
+f G "ldiv" 3 253 "ldiv_t(sint16 numer,sint16 denom,*void seed,int8 c,int8 strtof48)" `633  "Multibyte character functions"
 C L "ldiv" 3 230 4 "FUNCTION"
 C L "ldiv" 4 2 7 "FUNCTION"
 D G "_STRING" 5 12 ""
@@ -1249,32 +1248,32 @@ F N "strncpy" 5 61 ""
 V L "s1" 5 61 "*int8" `643 
 V L "s2" 5 61 "*int8" `644 
 V L "n" 5 61 "int8" `645 
-F G "strncpy" 5 62 "*int8(*int8 s1,*int8 s2,int8 n)" `642 
+F G "strncpy" 5 62 "*int8(*int8 s1,*int8 s2,int8 n,*int8 strtof)" `642 
 V L "s" 5 63 "*int8" `646 
 F N "strcat" 5 78 ""
 V L "s1" 5 78 "*int8" `648 
 V L "s2" 5 78 "*int8" `649 
-F G "strcat" 5 79 "*int8(*int8 s1,*int8 s2)" `647 
+F G "strcat" 5 79 "*int8(*int8 s1,*int8 s2,*int8 strtoul,*int8 strtof)" `647 
 V L "s" 5 80 "*int8" `650 
 F N "strncat" 5 96 ""
 V L "s1" 5 96 "*int8" `652 
 V L "s2" 5 96 "*int8" `653 
 V L "n" 5 96 "int8" `654 
-F G "strncat" 5 97 "*int8(*int8 s1,*int8 s2,int8 n)" `651 
+F G "strncat" 5 97 "*int8(*int8 s1,*int8 s2,int8 n,*int8 seed,int8 isupper)" `651 
 V L "s" 5 98 "*int8" `655 
 C L "memcmp" 5 19 3 "FUNCTION"
 F N "memcmp" 5 120 ""
 V L "s1" 5 120 "*void" `657 
 V L "s2" 5 120 "*void" `658 
 V L "n" 5 120 "int8" `659 
-F G "memcmp" 5 121 "sint8(*void s1,*void s2,int8 n)" `656 
+F G "memcmp" 5 121 "sint8(*void s1,*void s2,int8 n,*int8 strtof)" `656 
 V L "su1" 5 122 "*int8" `660 
 V L "su2" 5 122 "*int8" `661 
 C L "strcmp" 5 19 2 "FUNCTION"
 F N "strcmp" 5 134 ""
 V L "s1" 5 134 "*int8" `663 
 V L "s2" 5 134 "*int8" `664 
-F G "strcmp" 5 135 "sint8(*int8 s1,*int8 s2)" `662 
+F G "strcmp" 5 135 "sint8(*int8 s1,*int8 s2,*int8 strtof)" `662 
 C L "strcoll" 5 19 2 "FUNCTION"
 F N "strcoll" 5 144 ""
 V L "s1" 5 144 "*int8" `666 
@@ -1285,7 +1284,7 @@ F N "strncmp" 5 157 ""
 V L "s1" 5 157 "*int8" `669 
 V L "s2" 5 157 "*int8" `670 
 V L "n" 5 157 "int8" `671 
-F G "strncmp" 5 158 "sint8(*int8 s1,*int8 s2,int8 n)" `668 
+F G "strncmp" 5 158 "sint8(*int8 s1,*int8 s2,int8 n,*int8 strtoul,*int8 strtof)" `668 
 C L "strxfrm" 5 19 4 "FUNCTION"
 F N "strxfrm" 5 170 ""
 V L "s1" 5 170 "*int8" `673 
@@ -1353,7 +1352,7 @@ C L "stricmp" 5 19 6 "FUNCTION"
 F N "stricmp" 5 392 ""
 V L "s1" 5 392 "*int8" `721 
 V L "s2" 5 392 "*int8" `722 
-F G "stricmp" 5 393 "sint8(*int8 s1,*int8 s2)" `720 
+F G "stricmp" 5 393 "sint8(*int8 s1,*int8 s2,int8 )" `720 
 F N "strlwr" 5 406 ""
 V L "s" 5 406 "*int8" `726 
 F G "strlwr" 5 407 "*int8(*int8 s)" `725 
@@ -1565,23 +1564,22 @@ D G "RUN_BUTTON" 0 26 "PIN_B7"
 V G "text" 0 27 "int8[50]" `881 
 V G "ct" 0 28 "int8" `882 
 F N "MAIN" 0 29 ""
-F G "MAIN" 0 29 "void()" `883 
-V L "dec" 0 30 "int8" `884 
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 2 "FUNCTION"
-V L "count" 0 37 "int8" `892 
-C L "MAIN" 0 31 1 "FUNCTION"
-V L "l" 0 41 "int8" `897 
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
-C L "MAIN" 0 31 1 "FUNCTION"
+F G "MAIN" 0 30 "void()" `883 
+V L "dec" 0 31 "int8" `884 
+C L "MAIN" 0 32 1 "FUNCTION"
+C L "MAIN" 0 32 2 "FUNCTION"
+V L "count" 0 38 "int8" `892 
+V L "start" 0 39 "int8" `893 
+V L "value" 0 42 "int16" `899 
+V L "max" 0 42 "int16" `900 
+V L "min" 0 42 "int16" `901 
+V L "i" 0 42 "int16" `902 
+V L "time" 0 42 "int16" `903 
+C L "MAIN" 0 32 1 "FUNCTION"
 C L "ser_isr" 8 3 13 "FUNCTION"
 F N "ser_isr" 8 28 ""
 F G "ser_isr" 8 28 "void()" `864 
-V L "inChar" 8 29 "int8" `900 
+V L "inChar" 8 29 "int8" `912 
 C L "ser_isr" 8 3 2 "FUNCTION"
 C L "ser_isr" 8 3 1 "FUNCTION"
 C L "ser_isr" 8 3 2 "FUNCTION"

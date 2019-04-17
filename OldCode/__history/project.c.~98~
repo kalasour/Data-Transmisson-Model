@@ -53,7 +53,7 @@ void main(){
    
    printf("Auto carribrate  started!\n");
    int n=0;
-   for (n = 0; n < 50; n++)
+   for (n = 0; n < 1000; n++)
    {
       output_high(PIN_B6);
       delay_ms(50);

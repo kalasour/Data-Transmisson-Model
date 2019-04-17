@@ -1,6 +1,6 @@
 #include <16F886.h>
 #device ADC = 10 *= 16
-
+#include <time.h> 
 #include <serialinput.h>
 #include <stdio.h>
 #include <string.h>
@@ -28,6 +28,7 @@ char text[50];
 int ct = 0;
 void main()
 {
+   time_t start,end;
    int dec = 0;
    setup_adc_ports(sAN0); // setup PIN A0 as analog input
    setup_adc(ADC_CLOCK_INTERNAL);
@@ -60,7 +61,6 @@ void main()
       //!         printf("Sensor value = %Lu\r\n", value);
    }
    printf("Auto carribrate  End max = %Lu ,min = %Lu\nmid = %Lu\n", max, min, (max + min) / 2);
-    delay_ms(1000);
    while (1)
    {
       dec = 0;
@@ -68,7 +68,10 @@ void main()
          time = time + 1;
       if (read_adc() >= (max + min) / 2)
       {
-         start = 1;
+         if(start==0){
+            start = 1;
+            time(&start); 
+         }
          delay_ms(75);
          for (count = 0; count < 8; count++)
          {

@@ -1,11 +1,22 @@
 ÀÄReciever
-   ÃÄMAIN  0/208  Ram=5
+   ÃÄMAIN  0/483  Ram=17
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@delay_ms1  0/20  Ram=1
-   ³  ÃÄ@PSTRINGC7_115200_62_63  0/120  Ram=4
+   ³  ÃÄ@PSTRINGC7_115200_62_63  0/118  Ram=4
    ³  ÃÄ@MEMSET  0/9  Ram=0
+   ³  ÃÄ@PSTRINGC7_115200_62_63  0/118  Ram=4
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@PSTRINGCN7_115200_62_63  0/124  Ram=5
+   ³  ÃÄ@PRINTF_LU_115200_62_63  0/93  Ram=9
+   ³  ÃÄ@PSTRINGCN7_115200_62_63  0/124  Ram=5
+   ³  ÃÄ@PRINTF_LU_115200_62_63  0/93  Ram=9
+   ³  ÃÄ@PSTRINGCN7_115200_62_63  0/124  Ram=5
+   ³  ÃÄ@PRINTF_LU_115200_62_63  0/93  Ram=9
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
    ³  ÃÄ@delay_ms1  0/20  Ram=1
    ³  ÃÄ@delay_ms1  0/20  Ram=1
    ³  ÃÄ@PSTRINGR_115200_62_63  0/32  Ram=2
+   ³  ÃÄ@PSTRINGCN7_115200_62_63  0/124  Ram=5
+   ³  ÃÄ@PRINTF_LU_115200_62_63  0/93  Ram=9
    ³  ÀÄ@MEMSET  0/9  Ram=0
    ÀÄser_isr  0/118  Ram=3
