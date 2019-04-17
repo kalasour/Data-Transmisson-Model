@@ -60,7 +60,6 @@ void main()
       //!         printf("Sensor value = %Lu\r\n", value);
    }
    printf("Auto carribrate  End max = %Lu ,min = %Lu\nmid = %Lu\n", max, min, (max + min) / 2);
-    delay_ms(1000);
    while (1)
    {
       dec = 0;
@@ -83,10 +82,10 @@ void main()
             delay_ms(50);
          }
          text[ct] = dec;
-         if (text[ct] == '\n' || time >= 30000)
+         if (text[ct] == '\n' || time >= 23800)
          {
             printf("%s", text);
-            if (time >= (30000))
+            if (time >= (23800))
                printf("- TIME OUT (%Lu)\n", time);
             memset(&text[0], '\0', sizeof(text));
             start = 0;

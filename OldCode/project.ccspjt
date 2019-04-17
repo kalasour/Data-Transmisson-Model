@@ -11,25 +11,25 @@ Type=4
 1=project.c
 
 [defines]
-buildcount=78
+buildcount=83
 
 [Opened Files]
-1=project.c
-t1=39
+1=..\MixCode\Reciever.c
+t1=32
 2=project_r.c
-t2=31
+t2=29
 3=project.c
-t3=36
+t3=29
 4=..\lab5\5.3.c
 t4=53
 5=project.c
 t5=51
-Count=2
+Count=3
 6=..\lab2\pro2.c
 t6=25
 
 [ProjectLog]
-Days=6
+Days=7
 D1=27-03-2019
 D1_L=5
 D1_L1=[71527]Stopped Editing.
@@ -50,7 +50,7 @@ D2_L8=[81312]Started Editing.
 D2_L9=[82208]Stopped Editing.
 D2_L10=[82268]Started Editing.
 D2_L11=[82564]Stopped Editing.
-TotalEdit=65
+TotalEdit=69
 TotalDebug=0
 D2_E=43
 D2_D=0
@@ -117,6 +117,20 @@ D6_L3=[83297]Stopped Editing.
 D6_E=1
 D6_D=0
 D6_L4=[83656]Project Closed.
+D7=17-04-2019
+D7_L=10
+D7_L1=[85380]Project Opened.
+D7_L2=[85440]Started Editing.
+D7_L3=[85582]Stopped Editing.
+D7_E=4
+D7_D=0
+D7_L4=[85658]Started Editing.
+D7_L5=[85700]Stopped Editing.
+D7_L6=[85700]Project Closed.
+D7_L7=[85705]Project Opened.
+D7_L8=[85716]Project Closed.
+D7_L9=[85727]Project Opened.
+D7_L10=[86305]Project Closed.
 
 [fileformats]
 forcecoff=0

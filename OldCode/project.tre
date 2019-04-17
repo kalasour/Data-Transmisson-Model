@@ -1,6 +1,10 @@
 읕project
-   읕MAIN  0/181  Ram=4
+   읕MAIN  0/215  Ram=5
       쳐@cinit1  (Inline)  Ram=0
+      쳐@delay_ms1  0/20  Ram=1
+      쳐@PSTRINGC7_9600_62_63  0/88  Ram=4
+      쳐@PSTRINGC7_9600_62_63  0/88  Ram=4
+      쳐@delay_ms1  0/20  Ram=1
       쳐@delay_ms1  0/20  Ram=1
       쳐@PSTRINGC7_9600_62_63  0/88  Ram=4
       쳐@delay_ms1  0/20  Ram=1
