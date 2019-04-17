@@ -1,20 +1,21 @@
 <template>
-  <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+
+  <v-app >
+    <v-toolbar color="#009688" app >
+      <v-toolbar-title class="headline text lime--text" >
+        LIGTH
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn flat href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2"></span>
       </v-btn>
     </v-toolbar>
-
+   
+   <!-- content -->
     <v-content>
       <!-- <HelloWorld/> -->
-      <template>
-        <v-list>
+      
+        <v-list >
           <v-list-tile v-for="(item,index) in chat" :key="index">
             <v-list-tile-content>
               <v-list-tile-title v-text="item"></v-list-tile-title>
@@ -22,21 +23,30 @@
           </v-list-tile>
         </v-list>
         <v-form v-model="valid" v-on:submit.prevent="send">
-          <v-container>
+          <v-container >
             <v-layout>
               <v-flex xs12 md12>
                 <v-text-field
                   :disabled="!canSend"
                   v-model="message"
-                  :label="canSend?'Aa':'sending...'"
+                  :label="canSend?'text me!!':'sending...'"
                   required
                 ></v-text-field>
               </v-flex>
             </v-layout>
           </v-container>
         </v-form>
-      </template>
+      
     </v-content>
+   
+    
+    <!-- footer -->
+   
+  <v-footer class="pa-3">
+    <v-spacer></v-spacer>
+    <div>GROUP 1.2 DATA TRANSMISSION MODEL</div>
+  </v-footer>
+
   </v-app>
 </template>
 
@@ -67,7 +77,8 @@ export default {
 
     rev.onmessage = (data, flags) => {
       // console.log(data.data)
-      if (JSON.parse(data.data).D != null&&JSON.parse(data.data).D != '\n') this.chat.push(JSON.parse(data.data).D)
+      if (JSON.parse(data.data).D != null && JSON.parse(data.data).D != "\n")
+        this.chat.push(JSON.parse(data.data).D);
     };
   },
   data() {
