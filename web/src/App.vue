@@ -1,6 +1,5 @@
 <template>
-
-  <v-app >
+  <v-app style=" background: #3A1C71;background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);" >
     <v-toolbar color="#009688" app >
       <v-toolbar-title class="headline text lime--text" >
         LIGTH
@@ -14,8 +13,9 @@
    <!-- content -->
     <v-content>
       <!-- <HelloWorld/> -->
-      
-        <v-list >
+        <v-list style="background:#FFCCBC;
+                      width:auto;
+                      margin:auto;">
           <v-list-tile v-for="(item,index) in chat" :key="index">
             <v-list-tile-content>
               <v-list-tile-title v-text="item"></v-list-tile-title>
@@ -23,7 +23,7 @@
           </v-list-tile>
         </v-list>
         <v-form v-model="valid" v-on:submit.prevent="send">
-          <v-container >
+          <v-container class="back">
             <v-layout>
               <v-flex xs12 md12>
                 <v-text-field
@@ -42,7 +42,7 @@
     
     <!-- footer -->
    
-  <v-footer class="pa-3">
+  <v-footer class="pa-3" style="background-color:#9E9E9E;">
     <v-spacer></v-spacer>
     <div>GROUP 1.2 DATA TRANSMISSION MODEL</div>
   </v-footer>
@@ -83,7 +83,7 @@ export default {
   },
   data() {
     return {
-      chat: [],
+      chat: ['cfghcfh'],
       canSend: true,
       valid: false,
       message: ""
